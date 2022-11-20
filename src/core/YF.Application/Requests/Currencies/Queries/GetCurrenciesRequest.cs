@@ -4,7 +4,7 @@ namespace YF.Application.Requests.Currencies.Queries;
 
 public record GetCurrenciesRequest() : IRequest<CurrencyListDto>;
 
-public class CurrenciesSpec : Specification<Currency, CurrencyDto>, ISingleResultSpecification
+public class CurrenciesSpec : Specification<Currency, CurrencyDto>
 {
     public CurrenciesSpec()
     {
