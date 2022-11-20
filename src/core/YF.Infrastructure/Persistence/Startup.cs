@@ -23,8 +23,8 @@ internal static class Startup
         services.AddScoped(typeof(IRepository<>), typeof(ApplicationDbRepository<>));
 
         foreach (var aggregateRootType in 
-            typeof(BaseEntity).Assembly.GetExportedTypes()
-                .Where(t => typeof(BaseEntity).IsAssignableFrom(t) && t.IsClass)
+            typeof(IAggregateRoot).Assembly.GetExportedTypes()
+                .Where(t => typeof(IAggregateRoot).IsAssignableFrom(t) && t.IsClass)
                 .ToList())
         {
             services.AddScoped(typeof(IReadRepository<>).MakeGenericType(aggregateRootType), sp =>

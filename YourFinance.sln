@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Domain", "src\core\YF.Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Application", "src\core\YF.Application\YF.Application.csproj", "{BFEF8013-7DDD-4CB2-8E27-63768A7FD2D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YF.Infrastructure", "src\core\YF.Infrastructure\YF.Infrastructure.csproj", "{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Infrastructure", "src\core\YF.Infrastructure\YF.Infrastructure.csproj", "{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YF.Api", "src\core\YF.Api\YF.Api.csproj", "{B0B623E0-0ED6-40A3-A129-0577DB494A39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B623E0-0ED6-40A3-A129-0577DB494A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B623E0-0ED6-40A3-A129-0577DB494A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B623E0-0ED6-40A3-A129-0577DB494A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B623E0-0ED6-40A3-A129-0577DB494A39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 		{89AB39FE-59B0-43C5-9853-0D20DE2640A1} = {B8EB8C75-FD51-4F75-8D40-AE24986CAC24}
 		{BFEF8013-7DDD-4CB2-8E27-63768A7FD2D9} = {B8EB8C75-FD51-4F75-8D40-AE24986CAC24}
 		{9E12010A-65EA-41CC-8AF5-99BB581DB7F7} = {B8EB8C75-FD51-4F75-8D40-AE24986CAC24}
+		{B0B623E0-0ED6-40A3-A129-0577DB494A39} = {B8EB8C75-FD51-4F75-8D40-AE24986CAC24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43B64AA2-7D20-45FA-99C7-E7AE567B3BF4}

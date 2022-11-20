@@ -6,7 +6,7 @@ using YF.Infrastructure.Persistence;
 
 namespace YF.Infrastructure;
 
-internal static class Startup
+public static class Startup
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {

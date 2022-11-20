@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace YF.Application;
 
-internal static class Startup
+public static class Startup
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {

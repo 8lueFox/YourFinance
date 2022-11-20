@@ -1,15 +1,8 @@
-﻿namespace YF.Application.Requests.Currencies;
+﻿using YF.Domain.Entities;
 
-public class CurrencyListDto
+namespace YF.Application.Requests.Currencies;
+
+public class CurrencyListDto : IDto
 {
     public List<CurrencyDto> Currencies { get; set; } = new();
-
-    public CurrencyListDto()
-    {
-    }
-
-    public CurrencyListDto(List<CurrencyDto> currencies)
-    {
-        Currencies = currencies;
-    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace YF.Domain.Entities;
 
-public class Currency : BaseEntity
+public class Currency : BaseEntity, IAggregateRoot
 {
     public string Code { get; private set; } = default!;
 

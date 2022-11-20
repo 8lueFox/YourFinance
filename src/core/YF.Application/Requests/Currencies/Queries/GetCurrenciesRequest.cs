@@ -4,10 +4,11 @@ namespace YF.Application.Requests.Currencies.Queries;
 
 public record GetCurrenciesRequest() : IRequest<CurrencyListDto>;
 
-public class CurrenciesSpec : Specification<Currency, CurrencyDto>
+public class CurrenciesSpec : Specification<Currency, CurrencyDto>, ISingleResultSpecification
 {
     public CurrenciesSpec()
     {
+        Query.Where(q => q.Name == "s");
         Query.AsNoTracking();
     }
 }
@@ -20,6 +21,9 @@ public class GetCurrenciesRequestHandler : IRequestHandler<GetCurrenciesRequest,
         => _repository = repository;
 
     public async Task<CurrencyListDto> Handle(GetCurrenciesRequest request, CancellationToken cancellationToken)
-        => new CurrencyListDto(await _repository.ListAsync(
-            (ISpecification<Currency, CurrencyDto>)new CurrenciesSpec(), cancellationToken));
+        => new CurrencyListDto
+        {
+            Currencies = await _repository.ListAsync(
+            (ISpecification<Currency, CurrencyDto>)new CurrenciesSpec(), cancellationToken)
+        };
 }
