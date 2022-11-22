@@ -2,11 +2,11 @@
 
 public class StockDto : IDto
 {
-    public string Company { get; set; }
+    public string? Company { get; set; }
 
-    public string Ticker { get; set; }
+    public string? Ticker { get; set; }
 
-    public string Sector { get; set; }
+    public string? Sector { get; set; }
 
     public double Units { get; set; }
 

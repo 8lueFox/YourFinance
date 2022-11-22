@@ -9,8 +9,8 @@ public class Transaction : BaseEntity, IAggregateRoot
 
     public double Price { get; set; }
 
+    public DateTime TimeOfBought { get; set; }
+
     public virtual Currency? Currency { get; set; }
     public virtual Stock? Stock { get; set; }
-
-    public DateTime TimeOfBought { get; set; }
 }
