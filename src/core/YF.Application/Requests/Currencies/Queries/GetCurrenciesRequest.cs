@@ -8,7 +8,6 @@ public class CurrenciesSpec : Specification<Currency, CurrencyDto>
 {
     public CurrenciesSpec()
     {
-        Query.Where(q => q.Name == "s");
         Query.AsNoTracking();
     }
 }

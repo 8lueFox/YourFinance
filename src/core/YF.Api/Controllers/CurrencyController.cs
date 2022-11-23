@@ -7,13 +7,27 @@ using YF.Domain.Entities;
 
 namespace YF.Api.Controllers;
 
+[Route("api/[controller]/[action]")]
 public class CurrencyController : BaseController
 {
     [HttpPost]
     public async Task<Guid> CreateCurrencyAsync(CreateCurrencyRequest request)
         => await Mediator.Send(request);
 
+    [HttpDelete]
+    public async Task<Guid> DeleteCurrencyAsync(DeleteCurrencyRequest request)
+        => await Mediator.Send(request);
+
+    [HttpPut]
+    public async Task<Guid> UpdateCurrencyAsync(UpdateCurrencyRequest request)
+        => await Mediator.Send(request);
+
     [HttpGet(Name = "GetAllCurrencies")]
     public async Task<CurrencyListDto> GetAllAsync([FromQuery] GetCurrenciesRequest request)
         => await Mediator.Send(request);
+
+    [HttpGet(Name = "FiltrAllCurrencies")]
+    public async Task<CurrencyListDto> FiltrCurrenciesAsync([FromQuery] FiltrCurrenciesRequest request)
+        => await Mediator.Send(request);
+
 }

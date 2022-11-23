@@ -1,5 +1,6 @@
 using YF.Application;
 using YF.Infrastructure;
+using YF.Infrastructure.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    using(var scope = app.Services.CreateScope())
+    {
+        var initalizer = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitializator>();
+        await initalizer.SeedAsync();
+    }
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }

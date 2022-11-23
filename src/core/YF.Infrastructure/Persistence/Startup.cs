@@ -15,6 +15,7 @@ internal static class Startup
         return services
             .AddDbContext<ApplicationDbContext>(opt =>
                 opt.UseInMemoryDatabase("YFdb"))
+            .AddScoped<ApplicationDbContextInitializator>()
             .AddRepositories();
     }
 

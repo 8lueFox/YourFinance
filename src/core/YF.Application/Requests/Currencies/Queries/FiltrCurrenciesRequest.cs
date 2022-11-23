@@ -9,7 +9,7 @@ public class CurrenciesByPhraseSpec : Specification<Currency, CurrencyDto>, ISpe
     public CurrenciesByPhraseSpec(string Phrase)
     {
         Phrase = Phrase.ToLowerInvariant();
-        Query.Where(q => q.Code.ToLowerInvariant().StartsWith(Phrase) || q.Name.ToLowerInvariant().StartsWith(Phrase));
+        Query.Where(q => q.Code.ToLowerInvariant().Contains(Phrase) || q.Name.ToLowerInvariant().Contains(Phrase));
         Query.AsNoTracking();
     }
 }
