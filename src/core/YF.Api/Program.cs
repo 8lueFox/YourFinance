@@ -1,9 +1,12 @@
+using YF.Api.Configurations;
 using YF.Application;
 using YF.Infrastructure;
 using YF.Infrastructure.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.AddConfiguration();
+builder.Services.AddSettings(builder.Configuration);
 // Add services to the container.
 
 builder.Services.AddControllers();

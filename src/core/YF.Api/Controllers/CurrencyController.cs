@@ -30,4 +30,8 @@ public class CurrencyController : BaseController
     public async Task<CurrencyListDto> FiltrCurrenciesAsync([FromQuery] FiltrCurrenciesRequest request)
         => await Mediator.Send(request);
 
+    [HttpGet(Name = "GetExchangeRate")]
+    public async Task<ExchangeRateDto> GetExchangeRateAsync([FromQuery] GetExchangeRateRequest request)
+        => await Mediator.Send(request);
+
 }
