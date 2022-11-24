@@ -1,7 +1,0 @@
-﻿//Take note
-//This is only example file showing how to create correct "abstractapi.json" file
-{
-  "AbstractApiSettings": {
-    "ExchangeRateKey": "11111111111111111111111111111111"
-  }
-}

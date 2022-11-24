@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Application", "src\core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Infrastructure", "src\core\YF.Infrastructure\YF.Infrastructure.csproj", "{9E12010A-65EA-41CC-8AF5-99BB581DB7F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YF.Api", "src\core\YF.Api\YF.Api.csproj", "{B0B623E0-0ED6-40A3-A129-0577DB494A39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YF.Api", "src\core\YF.Api\YF.Api.csproj", "{B0B623E0-0ED6-40A3-A129-0577DB494A39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{4601C7CA-6916-473D-B812-C633DEF0B405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
