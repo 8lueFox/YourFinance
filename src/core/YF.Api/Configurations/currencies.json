@@ -1,7 +1,7 @@
 ﻿{
   "AbstractApiSettings": {
     "ExchangeRateKey": "37a2786be3c047a3ac3d2d8c1260e0ee"
-  }
+  },
   "CoinMarketCapApiSettings": {
     "ExchangeRateKey": "ae51bc3c-4ddd-490a-8be7-d8e6ee8ab080"
   }

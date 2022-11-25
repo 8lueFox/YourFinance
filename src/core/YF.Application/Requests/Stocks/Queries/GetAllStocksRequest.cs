@@ -14,7 +14,9 @@ public class StocksByNothingSpec : Specification<Stock, StockDto>
             Company = s.Company,
             Ticker = s.Ticker,
             Sector = s.Sector,
-            Units = s.Transactions.Sum(t => t.Units)
+            Units = s.Transactions.Sum(t => t.Units),
+            AvgPrice = s.Transactions.Sum(t => t.Units * t.Price) / s.Transactions.Sum(t => t.Units),
+            CostBasis = s.Transactions.Sum(t => t.Units * t.Price)
         });
     }
 }
